@@ -1,22 +1,26 @@
 # main links
-#main:
+main:
 #  - title: "Quick-Start Guide"
 #    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+#   - title: "About"
+#     url: https://mmistakes.github.io/minimal-mistakes/about/
+#   - title: "Sample Posts"
+#     url: /year-archive/
+#   - title: "Sample Collections"
+#     url: /collection-archive/
+#   - title: "Sitemap"
+#     url: /sitemap/
+    - title: "Posts"
+      url: /year-archive/
+    - title: "Categories"
+      url: /categories/
 
 docs:
-  - title: Linux
+  - title: System
     children:
-      - title: "hihi"
+      - title: "Network"
         url: categories/linux
   - title: project
     children:
       - title: "DIVA2"
-        url: categories/project
+        url: https://github.com/dazory/diva2
