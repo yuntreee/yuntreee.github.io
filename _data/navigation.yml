@@ -19,7 +19,7 @@ docs:
   - title: System
     children:
       - title: "Network"
-        url: categories/linux
+        url: categories/Network
   - title: project
     children:
       - title: "DIVA2"
