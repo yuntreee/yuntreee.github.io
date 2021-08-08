@@ -20,7 +20,9 @@ docs:
     children:
       - title: "Network"
         url: categories/Network
-  - title: project
+      - title: "Shell Script"
+        url: categories/Shell  
+  - title: Project
     children:
       - title: "DIVA2"
         url: https://github.com/dazory/diva2
