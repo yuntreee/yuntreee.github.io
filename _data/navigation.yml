@@ -22,13 +22,13 @@ docs:
         url: categories/Network
       - title: "Shell Script"
         url: categories/Shell  
-    - title: Programming
+  - title: Programming
     children:
       - title: "C/C++"
         url: categories/C
-       -title: "Python"
+      - title: "Python"
         url: Python
-    - title: Database
+  - title: Database
     children:
       - title: "MySQL"
         url: categories/MySQL
