@@ -23,15 +23,15 @@ docs:
       - title: "Shell Script"
         url: categories/Shell  
     - title: Programming
-     children:
-       - title: "C/C++"
-         url: categories/C
-       - title: "Python"
-         url: Python
+    children:
+      - title: "C/C++"
+        url: categories/C
+       -title: "Python"
+        url: Python
     - title: Database
-     children:
-       - title: "MySQL"
-         url: categories/MySQL
+    children:
+      - title: "MySQL"
+        url: categories/MySQL
   - title: Project
     children:
       - title: "DIVA2"
