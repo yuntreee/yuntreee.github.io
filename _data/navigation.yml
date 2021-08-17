@@ -21,11 +21,11 @@ docs:
       - title: "Network"
         url: categories/Network
       - title: "Shell Script"
-        url: categories/Shell  
+        url: categories/Shell
+      - title: "Windows Server"
+        url: categories/windows  
   - title: Programming
     children:
-      - title: "C/C++"
-        url: categories/C
       - title: "Python"
         url: Python
   - title: Database
