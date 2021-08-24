@@ -27,7 +27,7 @@ docs:
   - title: Programming
     children:
       - title: "Python"
-        url: Python
+        url: categories/Python
   - title: Database
     children:
       - title: "MySQL"
