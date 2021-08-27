@@ -20,14 +20,16 @@ docs:
     children:
       - title: "Network"
         url: categories/Network
-      - title: "Shell Script"
-        url: categories/Shell
+      - title: "Linux Server(CentOS 8)"
+        url: categories/Linux
       - title: "Windows Server"
         url: categories/windows  
   - title: Programming
     children:
       - title: "Python"
         url: categories/Python
+      - title: "Shell Script"
+        url: categories/Shell
   - title: Database
     children:
       - title: "MySQL"
