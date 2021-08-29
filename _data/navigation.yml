@@ -20,7 +20,7 @@ docs:
     children:
       - title: "Network"
         url: categories/Network
-      - title: "Linux Server(CentOS 8)"
+      - title: "Linux Server"
         url: categories/Linux
       - title: "Windows Server"
         url: categories/windows  
