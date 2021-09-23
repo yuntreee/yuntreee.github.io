@@ -23,13 +23,17 @@ docs:
       - title: "Linux Server"
         url: categories/Linux
       - title: "Windows Server"
-        url: categories/windows  
+        url: categories/windows 
+      - title: "AWS"
+        url: categories/AWS 
   - title: Programming
     children:
       - title: "Python"
         url: categories/Python
       - title: "Shell Script"
         url: categories/Shell
+      - title: "Ansible"
+        url: categories/Ansible
   - title: Database
     children:
       - title: "MySQL"
