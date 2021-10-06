@@ -95,6 +95,7 @@ Private 서브넷의 라우팅 테이블은 **NAT GW**에 연결한다.
    
    service sshd restart
    ```
-
    
-Public 서브넷에 생성된 EC2는 공인IP가 없고 사설IP만 있기 때문에 외부에서 직접 접근할 수 없다. 
+Public 서브넷에 생성된 EC2는 공인IP가 없고 사설IP만 있기 때문에 외부에서 직접 접근할 수 없다. 대신 NAT GW를 사용해 외부와 통신한다.
+
+> [CloudFormation Code](https://github.com/yuntreee/CloudFormation/blob/399beb741f52cb35b9bdd6bc02a2153668ce5722/NAT-GW.yml)
