@@ -26,6 +26,8 @@ docs:
         url: categories/windows 
       - title: "AWS"
         url: categories/AWS 
+      - title: "Docker"
+        url: categories/Docker 
   - title: Programming
     children:
       - title: "Python"
