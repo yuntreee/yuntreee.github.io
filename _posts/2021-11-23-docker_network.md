@@ -179,4 +179,3 @@ $ docker run -itd --name=test01 --net=custombridge --net-alias=rr centos
 $ docker run -it --name=ping00 --net=custombridge centos
 [root@b3573b2cbda2 /]# ping -c 1 rr
 ```
-
