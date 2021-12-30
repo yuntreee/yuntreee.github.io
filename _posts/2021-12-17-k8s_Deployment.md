@@ -1,6 +1,6 @@
 ---
 title: "[k8s] Deployment"
-date: '2021-12-17 01:6:14'
+date: '2021-12-17 01:06:14'
 categories: Docker
 toc: true
 toc_sticky: true
