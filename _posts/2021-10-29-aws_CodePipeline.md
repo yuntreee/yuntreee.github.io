@@ -19,7 +19,7 @@ CodePipeline이란 간단히 말해 CodeCommit, CodeBuild, CodeDeploy를 하나�
 
 ## 2. CodePipeline 구성
 
-이전 포스트들을 ([Cloud9&CodeCommit](https://yuntreee.github.io/aws/aws_C9&CodeCommit/), [CodeBuild&CodeDeploy](https://yuntreee.github.io/aws/aws_CodeBuild&CodeDeploy/)) 참고하여 Cloud9 -> CodeCommit -> CodeBuild -> CodeDeploy 의  프로세스를 거치는 어플리케이션을 구성한다.
+이전 포스트들을 ([Cloud9&CodeCommit](https://yuntreee.github.io/aws/aws_C9_CodeCommit/), [CodeBuild&CodeDeploy](https://yuntreee.github.io/aws/aws_CodeBuild_CodeDeploy/)) 참고하여 Cloud9 -> CodeCommit -> CodeBuild -> CodeDeploy 의  프로세스를 거치는 어플리케이션을 구성한다.
 
 구성된 각 단계들을 CodePipeline으로 묶고 파이프라인을 실행하여 확인한다.
 
