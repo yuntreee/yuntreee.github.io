@@ -173,13 +173,13 @@ AWS의 ELB와 연동될 것이다.
 
 도커파일을 빌드하고 EKS로 배포할 수 있는 CodeBuild를 생성한다.
 
-![image](https://user-images.githubusercontent.com/60495897/147952711-a4e810fd-7c2b-432d-8fb5-59877dc75d14.png)
+![image](https://user-images.githubusercontent.com/60495897/147952711-a4e810fd-7c2b-432d-8fb5-59877dc75d14.png){: width="70%" height="70%" .align-center}
 
  생성한 Github 저장소에 연결한다.
 
 
 
-![image](https://user-images.githubusercontent.com/60495897/147952804-c0a263d1-bff2-47f7-8f2a-2b624826c6af.png)
+![image](https://user-images.githubusercontent.com/60495897/147952804-c0a263d1-bff2-47f7-8f2a-2b624826c6af.png){: width="70%" height="70%" .align-center}
 
 CodeBuild로 도커 이미지를 생성할 것이기 때문에 *Managed image* 선택 후 *Privileged* 를 체크한다.
 
@@ -189,7 +189,7 @@ EKS가 있는 VPC를 선택 후 Private 서브넷들을 고른다. 해당 Privat
 
 
 
-![image](https://user-images.githubusercontent.com/60495897/147952362-17382f18-888c-47d7-a0f0-76c98dbb7d52.png)
+![image](https://user-images.githubusercontent.com/60495897/147952362-17382f18-888c-47d7-a0f0-76c98dbb7d52.png){: width="70%" height="70%" .align-center}
 
 buildspec.yaml에서 사용될 환경변수를 설정한다.
 
@@ -199,7 +199,7 @@ IMAGE_TAG : 빌드된 이미지에 붙여질 태그이다.
 
 
 
-![image](https://user-images.githubusercontent.com/60495897/147952964-fb261839-72bd-4b70-b049-9dfb7e11a041.png)
+![image](https://user-images.githubusercontent.com/60495897/147952964-fb261839-72bd-4b70-b049-9dfb7e11a041.png){: width="70%" height="70%" .align-center}
 
 Buildspec 파일의 이름을 설정한다.
 
@@ -271,10 +271,10 @@ CodePipeline 릴리즈 후 결과를 확인한다.
 
 ```kubectl get pods,deploy,svc``` 로 배포 결과를 확인 후, 생성된 ELB 주소로 웹서비스에 접근해본다.
 
-![image](https://user-images.githubusercontent.com/60495897/147955755-489474ef-76df-4f4f-8148-c92ead0f57b5.png)
+![image](https://user-images.githubusercontent.com/60495897/147955755-489474ef-76df-4f4f-8148-c92ead0f57b5.png){: width="70%" height="70%" .align-center}
 
 
 
 ECR에서 생성한 도커 이미지가 업로드되어 있음을 확인할 수 있다.
 
-![image](https://user-images.githubusercontent.com/60495897/147955829-20ae18d3-c58c-4eca-b044-7a17c6f46479.png)
+![image](https://user-images.githubusercontent.com/60495897/147955829-20ae18d3-c58c-4eca-b044-7a17c6f46479.png){: width="70%" height="70%" .align-center}
