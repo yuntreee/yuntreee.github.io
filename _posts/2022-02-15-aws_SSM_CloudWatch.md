@@ -1,6 +1,6 @@
 ---
 title: "[AWS] SSM으로 CloudWatch Agent 설치/실행"
-date: '2022-02-15 22:06:30'
+date: '2022-02-14 22:06:30'
 categories: AWS
 toc: true
 toc_sticky: true
@@ -21,7 +21,7 @@ AWS System Manager(SSM)는 관리형 노드들을 제어하기 위해 사용하�
 
 **CloudWatchAgentServerPolicy** 와 **AmazonSSMManagedInstanceCore** 정책을 사용한다.
 
-![image](https://user-images.githubusercontent.com/60495897/153786251-8133f458-465c-43a4-8386-93f216de954b.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153786251-8133f458-465c-43a4-8386-93f216de954b.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -53,17 +53,13 @@ https://docs.aws.amazon.com/ko_kr/systems-manager/latest/userguide/sysman-manual
 
 *System Manager -> 노드관리->명령실행 -> 명령 실행*  으로 이동한다.
 
-![image](https://user-images.githubusercontent.com/60495897/153787255-1ccda223-b6a9-41e5-92f5-e1ce7c4b0d6f.png){: width="70%" height="70%" .align-center}
-
-
-
-![image](https://user-images.githubusercontent.com/60495897/153787463-a8a7dc4b-18ce-4616-82bc-af6d463608fe.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153787463-a8a7dc4b-18ce-4616-82bc-af6d463608fe.png){: width="90%" height="90%" .align-center}
 
 
 
 명령 문서는 **AWS-ConfigureAWSPackage** 을 선택한다.
 
-![image](https://user-images.githubusercontent.com/60495897/153788378-eed4a1a0-2c7e-47aa-9559-29b792272ecb.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153788378-eed4a1a0-2c7e-47aa-9559-29b792272ecb.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -77,21 +73,21 @@ Name : AmazonCloudWatchAgent
 
 Version: latest
 
-![image](https://user-images.githubusercontent.com/60495897/153789675-8cf7fe85-a45c-4f27-8725-cc8eb929a9e3.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153789675-8cf7fe85-a45c-4f27-8725-cc8eb929a9e3.png){: width="90%" height="90%" .align-center}
 
 
 
 해당 명령을 실행할 대상을 선택한다. 인스턴스 태그를 통해 지정하거나 수동으로 선택할 수도 있다.
 
-![image](https://user-images.githubusercontent.com/60495897/154063221-067d3bfc-e49a-4945-a390-9e518b9a7be6.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/154063221-067d3bfc-e49a-4945-a390-9e518b9a7be6.png){: width="90%" height="90%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/154063528-d3eb7841-eab4-4292-8d20-508d6d916454.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/154063528-d3eb7841-eab4-4292-8d20-508d6d916454.png){: width="90%" height="90%" .align-center}
 
 
 
 명령을 실행하고, CloudWatch Agent가 설치되었는지 확인한다.
 
-![image](https://user-images.githubusercontent.com/60495897/153973854-a9457e28-85f0-4a12-a83f-71245287e2e3.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153973854-a9457e28-85f0-4a12-a83f-71245287e2e3.png){: width="90%" height="90%" .align-center}
 
 ```bash
 [root@ip-10-0-0-10 ec2-user]# systemctl status amazon-cloudwatch-agent.service
@@ -155,7 +151,7 @@ config.json을 통해 원하는 지표를 CloudWatch로 보내도록 설정 후 
 }
 ```
 
-![image](https://user-images.githubusercontent.com/60495897/154065264-6d067c22-f130-4a6d-bdfb-19b8d7983856.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/154065264-6d067c22-f130-4a6d-bdfb-19b8d7983856.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -165,7 +161,7 @@ config.json을 통해 원하는 지표를 CloudWatch로 보내도록 설정 후 
 
 명령 문서는 **AmazonCloudWatch-ManageAgent** 를 선택한다.
 
-![image](https://user-images.githubusercontent.com/60495897/153802268-de7e5f05-7c02-4bff-8967-53ac545ab25e.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153802268-de7e5f05-7c02-4bff-8967-53ac545ab25e.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -183,7 +179,7 @@ Optional Open Telemetry Collector Configuration Source : ssm
 
 Optional Restart : yes
 
-![image](https://user-images.githubusercontent.com/60495897/154066347-ce90ceaf-dc1d-4b91-b4bf-e06fab75fdf9.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/154066347-ce90ceaf-dc1d-4b91-b4bf-e06fab75fdf9.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -191,7 +187,7 @@ Optional Restart : yes
 
 
 
-![image](https://user-images.githubusercontent.com/60495897/153974950-66bdabd7-1abf-4585-8fce-22192d65adb2.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/153974950-66bdabd7-1abf-4585-8fce-22192d65adb2.png){: width="90%" height="90%" .align-center}
 
 
 
@@ -201,4 +197,4 @@ Optional Restart : yes
 
 CloudWatch -> 지표 -> 모든 지표 로 이동하여 config.json에서 설정한 Custom Namespace 가 생성되었는지 확인한다.
 
-![image](https://user-images.githubusercontent.com/60495897/154067456-16f3c369-cd2f-4d03-87cb-9c9b77516460.png){: width="70%" height="70%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/154067456-16f3c369-cd2f-4d03-87cb-9c9b77516460.png){: width="90%" height="90%" .align-center}
