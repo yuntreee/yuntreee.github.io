@@ -1,6 +1,6 @@
 ---
 title: "[AWS] SSM으로 CloudWatch Agent 설치/실행"
-date: '2022-02-14 22:06:30'
+date: '2022-02-15 22:06:30'
 categories: AWS
 toc: true
 toc_sticky: true
