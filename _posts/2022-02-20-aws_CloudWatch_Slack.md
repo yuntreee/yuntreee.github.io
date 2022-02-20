@@ -1,5 +1,5 @@
 ---
-title: "[AWS] Lambda로 EC2 시작/종료 자동화"
+title: "[AWS] CloudWatch와 Slack 연동"
 date: '2022-02-20 15:30:30'
 categories: AWS
 toc: true
