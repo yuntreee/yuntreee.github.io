@@ -70,7 +70,7 @@ Slack으로 메세지를 보내는 코드는 [여기](https://www.comtec.kr/2021
 CloudWatch 경보를 생성한다. 테스트를 위해 지표는 CPU 사용량이 10% 이상일 때 울리도록 하였다.
 
 ![image-20220220150002303](https://user-images.githubusercontent.com/60495897/154833879-2bb21edb-13a0-41fa-899e-7bfab6ec90b4.png)
-{: width="90%" height="90%" .align-center}
+{: width="80%" height="80%" .align-center}
 
 
 
