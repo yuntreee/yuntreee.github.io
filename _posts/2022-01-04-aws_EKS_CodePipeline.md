@@ -13,7 +13,7 @@ Github (혹은 CodeCommit) -> CodeBuild -> ECR -> EKS 로 이어지는 파이프
 
 
 
-#### 1) EKS 클러스터 생성
+### 1) EKS 클러스터 생성
 
 ```bash
 eksctl create cluster 
@@ -33,7 +33,7 @@ eksctl create cluster
 
 
 
-#### 2) Github Repository 생성
+### 2) Github Repository 생성
 
 CodePipeline과 연동할 저장소를 생성한다.
 
@@ -163,13 +163,13 @@ AWS의 ELB와 연동될 것이다.
 
 
 
-#### 3) ECR 생성
+### 3) ECR 생성
 
 도커 이미지 저장소인 ECR을 생성한다.
 
 
 
-#### 4) CodeBuild 생성
+### 4) CodeBuild 생성
 
 도커파일을 빌드하고 EKS로 배포할 수 있는 CodeBuild를 생성한다.
 
@@ -205,7 +205,7 @@ Buildspec 파일의 이름을 설정한다.
 
 
 
-#### 5) CodePipeline 생성
+### 5) CodePipeline 생성
 
 CodePipeline을 생성한다. . Source Stage는 Github, Build Stage는 CodeBuild로 설정한다.
 
@@ -213,7 +213,7 @@ Deploy Stage는 EKS Fargate가 해주므로 생략한다.
 
 
 
-#### 6) CodeBuild 접근 허용
+### 6) CodeBuild 접근 허용
 
 EKS 클러스터에 CodeBuild가 접근할 수 있도록 허용해야 kubectl 명령이 가능하다.
 
