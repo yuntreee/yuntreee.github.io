@@ -69,13 +69,14 @@ Slack으로 메세지를 보내는 코드는 [여기](https://www.comtec.kr/2021
 
 CloudWatch 경보를 생성한다. 테스트를 위해 지표는 CPU 사용량이 10% 이상일 때 울리도록 하였다.
 
-![image-20220220150002303](C:\Users\lewis\AppData\Roaming\Typora\typora-user-images\image-20220220150002303.png){: width="90%" height="90%" .align-center}
+![image-20220220150002303](https://user-images.githubusercontent.com/60495897/154833879-2bb21edb-13a0-41fa-899e-7bfab6ec90b4.png)
+{: width="90%" height="90%" .align-center}
 
 
 
 경보가 울리면 위에서 생성해둔 SNS에 In alarm 상태를 전송한다.
 
-![image-20220220150107857](C:\Users\lewis\AppData\Roaming\Typora\typora-user-images\image-20220220150107857.png){: width="90%" height="90%" .align-center}
+![image-20220220150107857](https://user-images.githubusercontent.com/60495897/154833920-3607bd0a-b379-45cc-a6b3-429605dc978c.png){: width="90%" height="90%" .align-center}
 
 
 
