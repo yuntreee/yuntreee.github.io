@@ -1,5 +1,5 @@
 ---
-title: "[AWS] CodePipeline으로 ECS CI/CD 환경 구성"
+title: "[AWS] CodePipeline으로 ECS CI/CD 환경 구성(1)"
 date: '2022-03-18 09:30:30'
 categories: AWS
 toc: true
