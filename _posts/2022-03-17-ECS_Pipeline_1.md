@@ -52,7 +52,7 @@ Node.js 웹애플리케이션을 ECS에 배포해볼것이다.
 
 
 
-#### [1] server.js
+**[1] server.js**
 
 ```javascript
 const express= require('express');
@@ -73,7 +73,7 @@ Node.js 와 express로 작성된 간단한 웹서버이다. 8080 포트를 리�
 
 
 
-#### [2] package.json
+**[2] package.json**
 
 ```json
 {
@@ -93,7 +93,7 @@ Node.js 와 express로 작성된 간단한 웹서버이다. 8080 포트를 리�
 
 
 
-#### [3] Dockerfile
+**[3] Dockerfile**
 
 ```dockerfile
 FROM node:carbon
@@ -115,7 +115,7 @@ CMD ["npm", "start"]
 
 
 
-#### [4] buildspec.yml
+**[4] buildspec.yml**
 
 ```yaml
 version: 0.2
@@ -177,7 +177,7 @@ EC2 를 사용하는 ECS 클러스터를 생성한다.
 
 GitHub와 연동 및 CodeBuild를 생성한다.
 
-#### [1] 소스 스테이지
+**[1] 소스 스테이지**
 
 소스 스테이지는 코드가 저장된 GitHub 레포지토리를 선택한다.
 
@@ -185,7 +185,7 @@ GitHub와 연동 및 CodeBuild를 생성한다.
 
 
 
-#### [2] 빌드 스테이지
+**[2] 빌드 스테이지**
 
 빌드 공급자를 AWS CodeBuild로 설정 후 빌드 프로젝트를 생성한다.
 
@@ -225,7 +225,7 @@ buildspec.yml을 사용하여 빌드하도록 한다. 이 값은 디폴트이며
 
 
 
-#### [3] 배포 스테이지
+**[3] 배포 스테이지**
 
 배포 스테이지를 추가하기 위해서는 ECS 서비스가 필요하다. 그런데 ECS 서비스를 생성할 때 도커 이미지가 필요하므로 일단 생략한다.
 
