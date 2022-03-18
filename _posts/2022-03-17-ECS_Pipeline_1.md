@@ -48,7 +48,7 @@ Node.js 웹애플리케이션을 ECS에 배포해볼것이다.
 
 
 
-![image](https://user-images.githubusercontent.com/60495897/158284423-ae1038b3-36cc-4467-aca5-a4df0db6dee5.png){: width="90%" height="90%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/158284423-ae1038b3-36cc-4467-aca5-a4df0db6dee5.png){: width="60%" height="60%" .align-center}
 
 
 
