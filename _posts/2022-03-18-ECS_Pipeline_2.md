@@ -98,7 +98,7 @@ ALB로부터 모든 트래픽을 허용하도록 EC2의 보안그룹을 수정�
 
 테스트를 위해 GitHub 코드를 업로드하면 파이프라인이 실행되어 업데이트한 웹 페이지가 배포된다.
 
-![image](https://user-images.githubusercontent.com/60495897/158395452-f239d49c-0b82-4dd9-947f-977fbb248a48.png){: width="90%" height="90%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/158395452-f239d49c-0b82-4dd9-947f-977fbb248a48.png){: width="60%" height="60%" .align-center}
 
 
 
