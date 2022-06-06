@@ -16,13 +16,13 @@ sidebar:
 
 빌드까지는 DEV 계정에서 진행된 후, cross account role을 사용해 PROD 계정의 CodeDeploy로 접근 후 배포하는 구조이다.
 
-![image](https://user-images.githubusercontent.com/60495897/172119549-6a3d5260-d795-42dd-9f44-3dd601e6dfa9.png)
+![image](https://user-images.githubusercontent.com/60495897/172119549-6a3d5260-d795-42dd-9f44-3dd601e6dfa9.png){: width="90%" height="90%" .align-center}
 
 위 그림을 참고하면 이해에 도움이 된다.
 
 ## 2. 서비스 역할 및 정책 설정
 
-DEV계정에 CodeCommit과 CodeBuild가 있고, PROD계정에 CodeDeploy가 있는 상황에서 이들을 하나의 파이프라인으로 묶는 과정이다.
+<span style='background-color: #f1f8ff'> **DEV 계정** </span>에 **CodeCommit**과 **CodeBuild**가 있고, <span style='background-color: #ffdce0'> **PROD 계정** </span>에 **CodeDeploy**가 있는 상황에서 이들을 하나의 파이프라인으로 묶는 과정이다.
 
 ### [1] KMS 생성
 
@@ -219,13 +219,21 @@ CodePipeline과 PROD계정은 생성된 고객 관리형 KMS를 통해 Artifact 
 
 ## 3. CodePipeline 설정
 
+CodePipeline에 Deploy 스테이지를 추가한다.
+
+<span style='background-color: #ffdce0'> **PROD 계정** </span>의 CodeDeploy 어플리케이션과 배포 그룹을 기입한다.
+
+해당 어플리케이션과 배포그룹을 찾을 수 없다고 뜰텐데, 무시해도 된다. DEV계정에 있는 것이 아니니 당연히 못찾는다.
+
+이제 파이프라인이 PROD계정의 CodeDeploy로 넘어갈 수 있도록 역할 설정을 해줘야 한다.
+
 AWS CLI를 통해 <span style='background-color: #f1f8ff'> **DEV 계정** </span>의 파이프라인 설정을 json 형태로 가져온다.
 
 ```bash
 aws codepipeline get-pipeline --name 파이프라인 이름 > pipeline.json
 ```
 
-pipeline.json을 열고 파이프라인이 생성한 고객 관리형 KMS를 사용하도록 설정한다.
+pipeline.json을 열고, [1]에서 생성한 고객 관리형 KMS를 사용하도록 설정한다.
 
 ```json
     "artifactStore": {
@@ -254,4 +262,22 @@ Deploy 스테이지에서 <span style='background-color: #ffdce0'> **PROD 계정
             "region": "ap-northeast-2",
             "namespace": "DeployVariables"
           }
+```
+
+<span style='background-color: #ffdce0'> **PROD 계정** </span>의 역할을 사용하기 때문에 <span style='background-color: #ffdce0'> **PROD 계정** </span>에 있는 CodeDeploy 어플리케이션에 접근할 수 있다.
+
+맨 아래 위치한 metadata 정보는 지워준다.
+
+```json
+"metadata": {
+  "pipelineArn": "arn:aws:codepipeline:region:account-ID:pipeline-name",
+  "created": "date",
+  "updated": "date"
+  }
+```
+
+다 설정했다면 파일을 **ANSI** 인코딩 타입으로 저장 후 다음 AWS CLI 명령어로 적용한다.
+
+```bash
+aws codepipeline update-pipeline --cli-input-json file://pipeline.json
 ```
