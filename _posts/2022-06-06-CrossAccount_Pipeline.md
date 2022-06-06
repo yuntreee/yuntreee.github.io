@@ -30,7 +30,7 @@ DEV계정에 CodeCommit과 CodeBuild가 있고, PROD계정에 CodeDeploy가 있�
 
 ![image](https://user-images.githubusercontent.com/60495897/172110146-c1b3b672-29f2-4c67-b1ad-bb9d7f685cd4.png){: width="90%" height="90%" .align-center}
 
-키 설정은 기본값으로 두고 관리자를 선택 후, KMS키를 사용할 사용자(역할)을 선택하는 화면에서 **CodePipeline이 사용하는 역할**과 <span style='background-color: #ffdce0'> **PROD 계정 ** </span> 을 추가한다.
+키 설정은 기본값으로 두고 관리자를 선택 후, KMS키를 사용할 사용자(역할)을 선택하는 화면에서 **CodePipeline이 사용하는 역할**과 <span style='background-color: #ffdce0'> **PROD 계정** </span> 을 추가한다.
 
 CodePipeline과 PROD계정은 생성된 고객 관리형 KMS를 통해 Artifact S3에 접근하게 된다.
 
@@ -93,7 +93,7 @@ CodePipeline과 PROD계정은 생성된 고객 관리형 KMS를 통해 Artifact 
 
 ### [3] 교차 계정 IAM 역할 생성
 
-<span style='background-color: #ffdce0'> **PROD 계정 ** </span>에서 <span style='background-color: #f1f8ff'> **DEV 계정** </span> 이 사용할 수 있는 역할을 생성한다.
+<span style='background-color: #ffdce0'> **PROD 계정** </span>에서 <span style='background-color: #f1f8ff'> **DEV 계정** </span> 이 사용할 수 있는 역할을 생성한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/172109651-135cbdd9-c82a-4e03-851c-4bbe385eba9d.png){: width="90%" height="90%" .align-center}
 
@@ -204,7 +204,7 @@ CodePipeline과 PROD계정은 생성된 고객 관리형 KMS를 통해 Artifact 
 
 ### [4] CodePipeline 역할 정책 추가
 
-<span style='background-color: #f1f8ff'> **DEV 계정** </span>의 CodePipeline이 **[3]**에서 생성한 <span style='background-color: #ffdce0'> **PROD 계정 ** </span>의 역할을 사용할 수 있도록 다음 인라인 정책을 추가한다.
+<span style='background-color: #f1f8ff'> **DEV 계정** </span>의 CodePipeline이 **[3]**에서 생성한 <span style='background-color: #ffdce0'> **PROD 계정** </span>의 역할을 사용할 수 있도록 다음 인라인 정책을 추가한다.
 
 ```json
 {
@@ -237,7 +237,7 @@ pipeline.json을 열고 파이프라인이 생성한 고객 관리형 KMS를 사
       }
 ```
 
-Deploy 스테이지에서 <span style='background-color: #ffdce0'> **PROD 계정 ** </span>의 역할을 사용하도록 설정한다.
+Deploy 스테이지에서 <span style='background-color: #ffdce0'> **PROD 계정** </span>의 역할을 사용하도록 설정한다.
 
 ```json
       {
