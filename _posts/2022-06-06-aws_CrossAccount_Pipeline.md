@@ -238,7 +238,7 @@ pipeline.json을 열고, [1]에서 생성한 고객 관리형 KMS를 사용하�
 ```json
     "artifactStore": {
       "type": "S3",
-      "location": "codepipeline-ap-northeast-2-845946196676",
+      "location": "<Artifact S3 버킷 ARN>",
       "encryptionKey": {
         "id": "[1]에서 생성한 KMS ARN",
         "type": "KMS"
