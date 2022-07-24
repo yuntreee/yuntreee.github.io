@@ -52,13 +52,13 @@ _System Manager -> 노드관리->명령실행 -> 명령 실행_ 으로 이동한
 
 명령 파라미터는 다음과 같다.
 
-Action : Install
-
-Installation Type : Uninstall and resinstall
-
-Name : AmazonCloudWatchAgent
-
-Version: latest
+> Action : Install
+>
+> Installation Type : Uninstall and resinstall
+>
+> Name : AmazonCloudWatchAgent
+>
+> Version: latest
 
 ![image](https://user-images.githubusercontent.com/60495897/153789675-8cf7fe85-a45c-4f27-8725-cc8eb929a9e3.png){: width="90%" height="90%" .align-center}
 
@@ -142,17 +142,17 @@ _System Manager -> 노드관리 -> 명령 실행 -> 명령 실행_ 으로 이동
 
 명령 파라미터는 다음과 같다.
 
-Action : configure
-
-Mode : ec2
-
-Optional Configuration Source : ssm
-
-Optional Configuration Location : 파라미터 스토어에 저장한 파라미터 이름
-
-Optional Open Telemetry Collector Configuration Source : ssm
-
-Optional Restart : yes
+> Action : configure
+>
+> Mode : ec2
+>
+> Optional Configuration Source : ssm
+>
+> Optional Configuration Location : 파라미터 스토어에 저장한 파라미터 이름
+>
+> Optional Open Telemetry Collector Configuration Source : ssm
+>
+> Optional Restart : yes
 
 ![image](https://user-images.githubusercontent.com/60495897/154066347-ce90ceaf-dc1d-4b91-b4bf-e06fab75fdf9.png){: width="90%" height="90%" .align-center}
 
