@@ -30,21 +30,21 @@ Lambda 함수는 S3의 응답을 받아 webp로 변환 후 사용자에게 응�
 
 프라이빗 S3 버킷을 생성한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183281664-146c1bd1-7d14-4918-9b3a-e2ed5bbb6562.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183281664-146c1bd1-7d14-4918-9b3a-e2ed5bbb6562.png){: width="90%" height="90%" .align-center}
 
 테스트 jpg 이미지를 업로드해놓는다.
 
-![image](https://user-images.githubusercontent.com/60495897/183281889-d9f99591-df62-4e57-aa3f-76860387aecf.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183281889-d9f99591-df62-4e57-aa3f-76860387aecf.png){: width="90%" height="90%" .align-center}
 
 ### 2) CloudFront 생성
 
 이 S3를 원본으로 하는 CloudFront 배포를 생성한다. 프라이빗 S3에 접근하기 위해 OAI를 설정한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183281979-eac55e44-ceae-4bd7-8ce6-d61877ed67bd.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183281979-eac55e44-ceae-4bd7-8ce6-d61877ed67bd.png){: width="90%" height="90%" .align-center}
 
 CloudFront로 요청하면, 지금은 jpg확장자로 응답된다.
 
-![image](https://user-images.githubusercontent.com/60495897/183282554-754f527d-1128-4a69-94c2-543c1ccc9288.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183282554-754f527d-1128-4a69-94c2-543c1ccc9288.png){: width="90%" height="90%" .align-center}
 
 ### 3) Lambda 권한 설정
 
@@ -94,7 +94,7 @@ lambda 뿐 아니라 lambda@edge도 사용할 수 있게 신뢰관계를 아래�
 
 이 역할을 사용하는 **Node.js 14** Lambda 를 생성한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183681123-37c35efa-0856-4dc3-a879-ff8b2c11b6ff.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183681123-37c35efa-0856-4dc3-a879-ff8b2c11b6ff.png){: width="90%" height="90%" .align-center}
 
 Lambda 함수가 프라이빗 S3 버킷에 접근할 수 있어야 한다.
 
@@ -135,7 +135,7 @@ npm 패키지를 설치해야 하는데, 이 작업은 로컬에서 해도 무�
 
 Lambda를 Cloud9으로 다운로드한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183293845-3af4d4d1-e2e8-4a95-b0ab-4da8c3f0eb03.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183293845-3af4d4d1-e2e8-4a95-b0ab-4da8c3f0eb03.png){: width="60%" height="60%" .align-center}
 
 아래의 함수를 사용한다.
 
@@ -256,35 +256,35 @@ yuntreee:~/environment/convert_webp $ npm install -y sharp
 
 작성된 어플리케이션을 Lambda로 업로드한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183294079-4142fb21-f4c9-4f4b-896c-3c1a0d15e9bc.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294079-4142fb21-f4c9-4f4b-896c-3c1a0d15e9bc.png){: width="60%" height="60%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/183294099-45e8bbcb-3867-4cc4-ad9b-223b53ff77a9.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294099-45e8bbcb-3867-4cc4-ad9b-223b53ff77a9.png){: width="60%" height="60%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/183294124-745a90ac-adfd-44b8-8e18-ecacc92f92bb.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294124-745a90ac-adfd-44b8-8e18-ecacc92f92bb.png){: width="60%" height="60%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/183294150-a937f470-4388-4978-a369-8bc7e3647880.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294150-a937f470-4388-4978-a369-8bc7e3647880.png){: width="60%" height="60%" .align-center}
 
 #### 5) Lambda@Edge 배포
 
 업로드가 완료되면 이제 Lambda@Edge로 배포한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183294182-0ab5eddf-c58b-4215-a8e1-f34f0ba685d1.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294182-0ab5eddf-c58b-4215-a8e1-f34f0ba685d1.png){: width="90%" height="90%" .align-center}
 
 CloudFront event는 **Origin Response** 로 설정한다. 원본 (여기서는 S3 버킷)의 응답에 대해 Lambda가 동작한다.
 
-![image](https://user-images.githubusercontent.com/60495897/183294261-caca862f-9acf-4488-87d7-e6ef785df7f0.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294261-caca862f-9acf-4488-87d7-e6ef785df7f0.png){: width="90%" height="90%" .align-center}
 
 _배포한 CloudFront 동작->편집_ 을 확인해보면 Lambda@Edge가 배포되어있다.
 
-![image](https://user-images.githubusercontent.com/60495897/183294299-c07a0e98-ac1a-461f-ae93-7b1f753cf4d3.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294299-c07a0e98-ac1a-461f-ae93-7b1f753cf4d3.png){: width="90%" height="90%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/183294318-225affae-9c17-4bb6-8314-554da1541e74.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183294318-225affae-9c17-4bb6-8314-554da1541e74.png){: width="90%" height="90%" .align-center}
 
 동일한 이미지로 테스트하면 CloudFront에 남아있는 jpg 캐시가 반환되기 때문에 캐시를 삭제해준다.
 
-![image](https://user-images.githubusercontent.com/60495897/183295298-68246984-2745-47f9-870f-8ff0630d11fa.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183295298-68246984-2745-47f9-870f-8ff0630d11fa.png){: width="90%" height="90%" .align-center}
 
-![image](https://user-images.githubusercontent.com/60495897/183295320-9d894d92-064a-46d8-84bd-93900518290c.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183295320-9d894d92-064a-46d8-84bd-93900518290c.png){: width="90%" height="90%" .align-center}
 
 ## 3. 결과 확인
 
@@ -292,4 +292,4 @@ CloudFront로 jpg 파일을 요청하면 webp로 변환된 이미지를 확인�
 
 첫 요청때는 Lambda가 동작하느라 Latency가 조금 있지만, 이후 요청은 CloudFront에 저장된 캐시로 빠르게 응답받는다.
 
-![image](https://user-images.githubusercontent.com/60495897/183298822-c7afc9aa-20c9-4dca-887b-0bfd4a3634e1.png){: width="80%" height="80%" .align-center}
+![image](https://user-images.githubusercontent.com/60495897/183298822-c7afc9aa-20c9-4dca-887b-0bfd4a3634e1.png){: width="90%" height="90%" .align-center}
