@@ -1,5 +1,5 @@
 ---
-title: "[AWS] Lambda@Edge로 이미지 webp 변환"
+title: "[AWS] API Gateway - api key 사용하기"
 date: "2022-08-10 00:25:30"
 categories: AWS
 toc: true
@@ -8,7 +8,7 @@ sidebar:
   nav: docs
 ---
 
-## AWS API Gateway - API Key 사용하기
+## API Key란
 
 API Gateway에 key를 등록하여, 해당 key를 요청에 포함할 때에만 api 호출을 허용할 수 있도록 보안을 강화할 수 있다.
 
