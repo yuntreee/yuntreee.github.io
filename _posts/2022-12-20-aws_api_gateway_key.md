@@ -1,6 +1,6 @@
 ---
 title: "[AWS] API Gateway - api key 사용하기"
-date: "2022-08-10 00:25:30"
+date: "2022-12-20 15:40:30"
 categories: AWS
 toc: true
 toc_sticky: true
