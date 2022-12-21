@@ -45,6 +45,8 @@ def lambda_handler(event, context):
     }
 ```
 
+
+
 ### 2) API Gateway 생성
 
 API Gateway -> REST API를 하나 생성한다.
@@ -53,9 +55,13 @@ API Gateway -> REST API를 하나 생성한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/208563577-3e315b96-0310-44ae-9585-42d27dcba26f.png){: width="90%" height="90%" .align-center}
 
+
+
 **[1]** 에서 생성한 Lambda를 호출하는 GET 메소드를 구성한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/208564824-56528912-525b-4679-8923-13cc13eb58d0.png){: width="90%" height="90%" .align-center}
+
+
 
 메소드를 요청할 때 API Key를 요구하도록 설정한다.
 
@@ -63,15 +69,21 @@ API Gateway -> REST API를 하나 생성한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/208565544-159211fa-682b-427a-a96a-0ee7f715fd09.png){: width="90%" height="90%" .align-center}
 
+
+
 설정 완료된 API를 배포한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/208564941-6192fb39-b6c9-4836-a745-56da2d883fee.png){: width="90%" height="90%" .align-center}
+
+
 
 ### 3) API Key, Usage Plan 구성
 
 **API Keys** 메뉴에서 새로운 API key를 하나 생성한다.
 
 ![image](https://user-images.githubusercontent.com/60495897/208563903-6e5e8c8e-a4e6-4d82-8084-13a3c3c5cce1.png){: width="90%" height="90%" .align-center}
+
+
 
 Key를 API 리소스에 연결하기 위해서는 **Usage Plan** 을 구성해야한다.
 
@@ -85,15 +97,22 @@ Key를 API 리소스에 연결하기 위해서는 **Usage Plan** 을 구성해�
 
 **Quota** 는 일/월/년 동안 최대 호출 수를 제한한다.
 
+
+
 ![image](https://user-images.githubusercontent.com/60495897/208565096-206c1850-3470-4b45-a4a5-291cf52e3581.png){: width="90%" height="90%" .align-center}
 
 Usage Plan이 적용될 API와 스테이지를 추가하는 화면이다.
+
+
 
 ![image](https://user-images.githubusercontent.com/60495897/208565234-0a369a53-c636-4616-b5fe-953e9ab00d31.png){: width="90%" height="90%" .align-center}
 
 Usage Plan이 인증에 사용할 수 있는 API Key를 추가하는 화면이다.
 
+
 _만약 Usage Plan에 여러 key를 등록한다면, Throttling/Quota 제한은 각 key별로 적용된다._
+
+
 
 ### 4) 테스트
 
@@ -101,9 +120,13 @@ _만약 Usage Plan에 여러 key를 등록한다면, Throttling/Quota 제한은 
 
 Stages 메뉴에 들어가면 배포한 API의 URL 이 있다.
 
+
+
 ![image](https://user-images.githubusercontent.com/60495897/208581276-7b940608-ae8d-4714-bd0f-2664e5837d86.png){: width="90%" height="90%" .align-center}
 
 PostMan에서 별다른 인증 없이 api를 호출하면 접근이 제한된다.
+
+
 
 ![image](https://user-images.githubusercontent.com/60495897/208581372-e0dd1aa0-a2a2-4054-9c18-9befca8ba69d.png){: width="90%" height="90%" .align-center}
 
