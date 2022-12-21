@@ -1,6 +1,6 @@
 ---
 title: "[AWS] API Gateway를 사용해 IoT Core 메시지 Publish 하기"
-date: "2022-12-21 15:230:30"
+date: "2022-12-21 15:23:30"
 categories: AWS
 toc: true
 toc_sticky: true
