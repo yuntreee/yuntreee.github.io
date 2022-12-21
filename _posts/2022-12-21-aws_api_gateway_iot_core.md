@@ -20,6 +20,7 @@ IoT 디바이스에서 MQTT로 메세지를 보낼 수 있다면 좋겠지만, �
 
 ![image](https://user-images.githubusercontent.com/60495897/208835472-efa1c769-f6d9-41b9-a6c1-14aa67c6b633.png){: width="90%" height="90%" .align-center}
 
+
 ## 2. 설정
 
 ### 1) API Gateway 설정
@@ -27,7 +28,6 @@ IoT 디바이스에서 MQTT로 메세지를 보낼 수 있다면 좋겠지만, �
 ![image](https://user-images.githubusercontent.com/60495897/208826671-2533240a-59f7-4f51-b545-b8de7cede599.png){: width="90%" height="90%" .align-center}
 
 AWS API Gateway -> REST API 를 생성한다.
-
 
 
 ![image](https://user-images.githubusercontent.com/60495897/208828773-a956c0dc-50c4-42fe-8d2d-4d6e7cb3d2fa.png){: width="90%" height="90%" .align-center}
@@ -51,11 +51,9 @@ POST 메소드를 생성한다.
 **Content Handling : Passthrough**
 
 
-
 ![image](https://user-images.githubusercontent.com/60495897/208829390-2dc12c26-721c-4f36-b278-2d59cb0dfca6.png){: width="90%" height="90%" .align-center}
 
 메소드 생성 후 API를 배포한다.
-
 
 
 ### 2) 테스트
@@ -65,7 +63,6 @@ POST 메소드를 생성한다.
 Postman 에서 Body에 메세지를 넣고 POST 호출하면 "OK" 리스폰스를 받고,
 
 IoT Core -> MQTT test client를 보면 메세지가 보내진 것을 확인할 수 있다.
-
 
 
 ---
