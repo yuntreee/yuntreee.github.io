@@ -49,7 +49,9 @@ CloudWatch Alarm 이 울리면 SNS가 호출되고 이어서 Lambda가 호출된
 
 SNS를 구독할 Lambda를 생성한다. 런타임은 *Node.js 14.X* 를 선택한다.
 
-Slack으로 메세지를 보내는 코드는 [여기](https://www.comtec.kr/2021/01/13/slack-template%EC%9C%BC%EB%A1%9C-%EC%98%88%EC%81%9C-aws-%EC%95%8C%EB%9E%8C-%EB%B0%9B%EA%B8%B0/) 를 참고한다. 위에서 생성한 Slack Webhook URL을 사용한다.
+Slack으로 메세지를 보내는 코드는 아래를 참고한다. 위에서 생성한 Slack Webhook URL을 사용한다.
+
+<script src="https://gist.github.com/yuntreee/92a8c530e2d5357617c3e400b1e4807d.js"></script>
 
 
 
